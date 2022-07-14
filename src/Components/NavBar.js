@@ -15,27 +15,31 @@ class NavBar extends Component {
           </div>
           <nav>
             <ul className="navbar">
-              <li onClick={topFunction} className="navitem">
+              <li onClick={this.props.topFunction} className="navitem">
                 <Link className="active" to="/">
                   Home
                 </Link>
               </li>
-              <li onClick={topFunction} className="navitem">
+              <li onClick={this.props.topFunction} className="navitem">
                 <Link to="/Thingie">Thingie</Link>
               </li>
               <li className="navitem dropdown">
-                <Link onClick={topFunction} to="/Projects" className="dropbtn">
+                <Link
+                  onClick={this.props.topFunction}
+                  to="/Projects"
+                  className="dropbtn"
+                >
                   Projects
                 </Link>
                 <div className="center"></div>
                 <ul className="dropdown-content">
-                  <li onClick={topFunction}>
-                    <Link to="/Projects/This-Website">This Website</Link>
+                  <li onClick={this.props.topFunction}>
+                    <Link to="/Projects/My-Website">My Website</Link>
                   </li>
-                  <li onClick={topFunction}>
+                  <li onClick={this.props.topFunction}>
                     <Link to="/Projects/Al-Cielo">Al Cielo</Link>
                   </li>
-                  <li onClick={topFunction}>
+                  <li onClick={this.props.topFunction}>
                     <Link to="/Projects/Glowing-Abyss">Glowing Abyss</Link>
                   </li>
                   <div className="dropdown-right-buffer" />
@@ -44,7 +48,7 @@ class NavBar extends Component {
                   <div className="dropdown-bottom-buffer" />
                 </ul>
               </li>
-              <li onClick={topFunction} className="navitem">
+              <li onClick={this.props.topFunction} className="navitem">
                 <Link to="/Experience">Experience</Link>
               </li>
             </ul>
@@ -53,11 +57,6 @@ class NavBar extends Component {
       </header>
     );
   }
-}
-
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
 export default NavBar;
@@ -73,7 +72,7 @@ export default NavBar;
               Projects
             </Link>
             <div className="dropdown-content">
-              <Link to="/Projects/This-Website">This Website</Link>
+              <Link to="/Projects/My-Website">My Website</Link>
               <Link to="/Projects/Al-Cielo">Al Cielo</Link>
               <Link to="/Projects/Glowing-Abyss">Glowing Abyss</Link>
             </div>

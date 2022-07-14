@@ -1,0 +1,41 @@
+.box {
+  /*outline: 1px solid rgb(112, 78, 213);*/
+  display: block;
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+/*.box:hover {
+  outline: 2px solid rgb(135, 95, 255);
+  cursor: pointer;
+}*/
+
+.box:hover .b-img {
+  filter: blur(10px); /*PERFORMANCE: CHANGE THIS TO JQUERY EVENT!!!*/
+}
+
+.box:not(:first-child) {
+  margin-left: 10px;
+}
+
+.title {
+  padding: 0;
+  margin: 5% 0 0 8%;
+  font-size: 2.5vw;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.b-img {
+  object-fit: cover;
+  min-height: 100%;
+  max-width: 100%;
+}
