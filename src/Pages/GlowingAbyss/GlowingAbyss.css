@@ -1,0 +1,17 @@
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  text-decoration: none;
+  border-radius: 6px;
+  width: auto;
+  padding: 4px 8px;
+  margin: auto;
+  color: white;
+  background-color: rgb(25, 34, 50);
+}
+
+a.button:hover {
+  background-color: rgb(34, 49, 74);
+}

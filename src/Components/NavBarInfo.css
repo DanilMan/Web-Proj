@@ -1,0 +1,51 @@
+.me {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+.icon,
+.info {
+  height: 100%;
+  white-space: nowrap;
+  padding: 0 2px;
+}
+
+.left-buffer {
+  width: 10px;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: -10px;
+  position: absolute;
+}
+
+.right-buffer {
+  width: 10px;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: -10px;
+  position: absolute;
+}
+
+.icon {
+  display: block;
+}
+
+.info {
+  display: none;
+}
+
+.me:hover .icon {
+  display: none;
+}
+
+.me:hover .info {
+  display: table;
+}
+
+.info div {
+  display: table-cell;
+  vertical-align: middle;
+}

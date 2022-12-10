@@ -1,18 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import NavBarInfo from "./NavBarInfo";
 import "./NavBar.css";
 
 class NavBar extends Component {
   state = {};
+
   render() {
     return (
       <header>
         <div className="navcontainer">
-          <div className="me">
-            <span>rudermandaniel@gmail.com</span>
-            <span className="breaker">|</span>
-            <span>(626) 773-6601</span>
-          </div>
+          <NavBarInfo />
           <nav>
             <ul className="navbar">
               <li onClick={this.props.topFunction} className="navitem">
@@ -24,13 +22,7 @@ class NavBar extends Component {
                 <Link to="/Thingie">Thingie</Link>
               </li>
               <li className="navitem dropdown">
-                <Link
-                  onClick={this.props.topFunction}
-                  to="/Projects"
-                  className="dropbtn"
-                >
-                  Projects
-                </Link>
+                <span>Projects</span>
                 <div className="center"></div>
                 <ul className="dropdown-content">
                   <li onClick={this.props.topFunction}>

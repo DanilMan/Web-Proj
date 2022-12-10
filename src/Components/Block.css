@@ -6,6 +6,7 @@
   color: inherit;
   position: relative;
   overflow: hidden;
+  border-radius: 5%;
 }
 
 /*.box:hover {
@@ -13,12 +14,13 @@
   cursor: pointer;
 }*/
 
-.box:hover .b-img {
+.box:hover .b-img,
+.box:focus .b-img {
   filter: blur(10px); /*PERFORMANCE: CHANGE THIS TO JQUERY EVENT!!!*/
 }
 
 .box:not(:first-child) {
-  margin-left: 10px;
+  margin-left: 4vw;
 }
 
 .title {
